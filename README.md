@@ -55,26 +55,30 @@ lines=cv2.HoughLinesP(edges1,1,np.pi/180,threshold=70,minLineLength=50,maxLineGa
 
 # Draw lines on the image
 ```
-
+for line in lines:
+    x1,y1,x2,y2=line[0]
+    cv2.line(image1,(x1,y1),(x2,y2),(255,0,0),3)
 ```
 
 # Display the result
 ```
-
+plt.imshow(image1)
+plt.title('Lines')
+plt.show
 ```
 ## Output
 
 ### Input image and grayscale image
 
-
+![8 1](https://user-images.githubusercontent.com/75234965/169490825-4fd9ff36-f73b-4d3f-a9e2-e9076732a522.PNG)
 
 ### Canny Edge detector output
 
-
+![8 2](https://user-images.githubusercontent.com/75234965/169491323-b7a69e7f-2db9-4f6b-836e-92f70fea1829.PNG)
 
 ### Display the result of Hough transform
 
-
+![8 4](https://user-images.githubusercontent.com/75234965/169491339-22ac4664-50ee-4f2c-bfbd-8ee29bdc255a.PNG)
 
 ## Result:
 Thus the program is written with python and OpenCV to detect lines using Hough transform. 
